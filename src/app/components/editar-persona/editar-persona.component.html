@@ -1,0 +1,41 @@
+<mat-dialog-actions align="end">
+    <button mat-icon-button color="warn" style="float:  right; margin: 10px;" matDialogClose> 
+        <!-- (click)="cerrar()" -->
+        <mat-icon>clear</mat-icon>
+    </button>
+</mat-dialog-actions>
+
+<mat-dialog-content style="width: 100%;">
+    <header>
+        <h1 align="center">Editar persona</h1>
+    </header>
+    <mat-form-field class="full-width" style="margin: 0px 10px; width: 40%;">
+        <input matInput placeholder="Nombre" required [(ngModel)]="personaEditada.nombre">
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" style="margin: 0px 10px; width: 40%;">
+        <input matInput placeholder="Primer Apellido" required [(ngModel)]="personaEditada.primerApellido">
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" style="margin: 0px 10px; width: 40%;">
+        <input matInput placeholder="Segundo Apellido" required [(ngModel)]="personaEditada.segundoApellido">
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" style="margin: 0px 10px; width: 40%;">
+        <input matInput placeholder="Edad" required [(ngModel)]="personaEditada.edad">
+        <mat-icon matSuffix>date_range</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" style="margin: 0px 10px; width: 40%;">
+        <input matInput placeholder="CURP" required [(ngModel)]="personaEditada.curp"> 
+        <mat-icon matSuffix>description</mat-icon>
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="guardarCambios()" matDialogClose>Guardar cambios</button>
+    <button mat-raised-button color="warn" matDialogClose>Cancelar</button>
+</mat-dialog-actions>
